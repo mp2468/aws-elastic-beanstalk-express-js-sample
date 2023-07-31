@@ -1,10 +1,9 @@
 version: 0.2
+
+  
 phases:
   install:
     runtime-versions:
-      nodejs: 12
-      commands:
-        npm install
-  post_build:
+      nodejs: 16
     commands:
-      aws elasticbeanstalk update-environment --environment-name test-environment
+      - npm install
